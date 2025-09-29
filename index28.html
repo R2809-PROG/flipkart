@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>flipkart!</title>
+    <style>
+      .container
+      {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items:center;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <nav class="navbar navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA/1BMVEX/6AH///8AQL7/9KX/8AD/6QD/7QAAP8D/7gD/6wD/5gAANagALbj/8QABQMAAQL3//vYAPMP/+dD/+9v/+Mj/9rT///v/8pT/7FT/7mX/6jH/7mr//e8ANsL/8h//9a//978AMcQANcOrrVoALr0ARaQANLTGwkAAN7B0h4SUnHO1tlAALcVEYppEYpiapGgAQanm3B3WzzLGwEmytFPAvU+BjoNPbZbTyjZtgolfeYeGlHOfpmBcdZDa0i2lqVtMa4wsVqN6jHkZTagsVZaSm2aUnXclUqPj2yVeepGBkXdZcJd0hYkAJ80AJLOKlH4AEroAGs9Wbp9EY6UAQae/V5RnAAAKZ0lEQVR4nO2da1fiuhqAkekVabGKo6JVWyoglksVFS/g9nZEx9n7nO38/99ykoKzvTVv0xaTuHnW0pkPin1WkjfJm6TJzX11cqwfYOrMDMVnZig+M0PxmRmKz8xQfGaG4jMzFJ+ZofjMDMVnZig+iQ0XlsrL3z6L5fLSwmcafi+vrOY+m0JudaX8/TMMF7Y+3+4fVreoy5LScHGtwNAPU1hbnKLhdoWxXkihsj0lw0Uu/EIqFOUY23CBef18SWEtdnuMa7jM2ukdy9karvNUgGMK6xkabvDTAl9S2cjKcIm1SiRL2Rgu8ldDfxMjpsKGPAvmCrAiaMhvFR0DVlTIcIO1AQgUbiBDPqPoSyrpDNdZP38MgH6RbLjMc5R5pkAe3RANF1g/fEyIY1Si4RrrR4/JWlJDrnvClxB7RZIh/3H0GVI8JRhus35uCgizfoKhOEVILMRoQ2FaYUh0S4w2FCWQjokOp5GGC0IVYa4Q2SdGGm6xfmZKtqgNWWa2k7BKa/id9RNTE7WmEWVYZv3A1JQpDVdYPzA1K5SGojXD6IYYZcj6eRNAZ8h6Zijruq6E6Loc71eiesQIQ3YZNiQmGUqwf3DY61Wr1d7hvi4psSQjsm4RhmxCqa5Ier96dLxTLHqO47pOiNfqBFqM344IphGGDJaaFEPpN1s1z7UttVQq5fN5/GWW8qrlFjuSDn5ARLomwvDbJyi9RJa0+knDsa1Syczn1fD7C0z/VAI/4xvHhroRnHV9yzTNfMlUVVRwpvpW8VyBPoVfQ93YH3g2EiOhNjahcMOroWwMB76dR0VnEhXdC6gQOTVUgl3fUs0SEiQXovVkAB/FpaEsVRu2OQmbZEpeAIRTDg0LWvCHY5GL7h+cPaCacmho1Bu2iuInuQE+Y+8C3T53hrJx66tABH2Jegk0RN4MZenUQ4JABH1JMSD3F5wZ6nrbQV07hWDeqZNDDV+G+uYlGn5S6CHsW3JD5MpQRoLvRmYQ1gl5bMqToay07BLcBb4BhRpiQ+TIUDYGtkktmFe7kiiGxpWLJoAmXR1FhvPkuT4/hkrPp2yBY8ySJoahPirGHqm9LsNrMSKNrNxYwDQiogidWzEMpTObPsigArT9U3Kg4cVQH/px+wnVsie4vtcY1KFMDSeGRsuKYWiqtlO7Hhyd/afZbN52evWRIik5YM2WD0Nlz4kx21Wd+at6oCmS9Jz3hnOJvBhqXQsuQOduT9EUuVCQ5bDlxUzrc2GonDtQCZas4jmqkaEc+horxnLkwVBWulA/UbLvRnDy90N4MNQuHGhSbx8rOhRSIuDB0LgGs6ItMLUdCQeGet3Jk9NO6s5m8o/nwFC6x6tKJEO/L+firoi+g72hHBSBzKH9kDDIhLA3RF0FsQ3m88AEEIC9odEGck/OOTC2JsPeEFVScpiZjzM2i4a5oVK1S8Q4456laYUcGGr3Vok06ja9UfK+EMPecD5PHNCol+mKkLlhOPUlVVK7SU40gbA2VM5dsqG/n7ivH8PaUDq1CXqoktY2BTc0dixyX9GW4k0DI2FsiIZs5O7eftDENtT7Pnlm6PbS9RXMDdGglGzoD9ONaJgbarvkVL5ZA/c8QTA2lG7IU8PU/T1rQ1mp5YmG1mmcLaRE2Brq+x45jeh2pLTHkBgb7jnkBSfnIG0oZWwoPdhkQ3DXGgxjw2NgRDOfctidY21oNFTi5hKrnTrQsDWUAy9PzLPZV1rq846fZijL+DjI5ESIpmkSwqg7QK67Z0ivSJB1m5bh5HRLKKJpuqbIwWg43K8f7vWq553m2cPuyeDH8R3qDEmO6mWr3UK08fd26+n+ItaS4dQMZSwVlo6hBMP6YbVz9nh/fHN53W0UfQ+fBkFfLj4UYruubVuWqgKG+ZL1CtuZ36dVzNBQ1vsH1c5fj4P2daPoea7jIg+kgU3GW5rVEh7B4OQh9b6gZ6wG7YQ4Q0Nt8NPH5WOrv0FSuJjw/0x84mWSczIn35N4ureUY4AMDZWzPx1cavjgB1JCNmpYWJNxmZp/s8JkAitOEYXYphyLZ9kOlc3hYfPxqev5josajZovJa2LBMwGZReZaSxF8RNFTmXUr/51f11zHBvef0DPn+xq6W9kfFhQ2hwenLfJg7JEeBwYTkB9hwFuQaCnyI+hLOekR3I2NAFql2GkeWuIWuWtm7Wh1YIOOn2OIT61K20G/exrqX3CRS3VO/ftu27Nc7KPNPa5QjfdmIqhnPvvT98NR2uZG3p9nQPDnL5/cfXjruajIU7GgmaR4bj0laKiGZI+ql8MMu70rT8oA810Z8C4529kW0+dKm3ybdpzfKOVabAxa9RPkK3hOFOBt++G3YWh6cE1xVlCmASJm5SGSAnbjLMumq5XgmH/sFrtNB8eB38/3e3Me5l2iGotoN6DmdawctCrds6OTgbHN3c7taLveT5OU+D99Li3CPuLJMcMPsbvaZ9tqOz+76fv+6GSNVYKD4Dic/T4DBOex2dWiqqfZPNQSkO9f3V0Ovi7/XR5vfOrgcrQcRw/fPWIbbuW64b5I/VDYKE3uLUL8jm8qRjiDsEw0LRXMgy8lhkEo2G/ftC7wBnDq11UeZ9Qa+zOfwBUd9XXP/6rdRskWqXJNJv4Kuv7nPfFX5vvMX4Bb7y4NF7/vKQkW6SZfs7748ggB0VyEVLPIaJgtW4Rbu4m4XYEN1TOgTE5dAg9NqwMtUdgSO4niyvvYWRYkG7IhmpXSbmf7RlGhrICzDmsdqrN3S9gZKgPPXIlRUPsjP4UK8NDYG3UqQpuqDRdwLCfsIN/ByNDaWCThzTFipxy1+UzrAyvLZW0tgYdsqeAjaEs45kxaZvJQHBDfR8wtJsZ9fesDJWqA5x1OhTcUMOvMSEZeqm3Bv+GjaF0TH7BgFpMdSDvFYxqaVclFqEFvDeIBiaGcuCT/PDW4MxCKRtDcPpr026aIcDEUOmA01/BDbUTYPrrjTJrhmwMjUuyodkA38kSHxaG8mYNeO3qcXaBhomhPoICzVF2zZCJIX7fDhEHfDkwBSwMtTMXMOxnNmajNczmnezSDyDPVgsyyrNh6N7Jns179aX5IhHvV1Y5Ggzde/WzuRtBxgvg4db7yU781/8gMvkzE+juRmB9v0UCKO+3+Pp3lPwL7pn5+ncFff37nr7+nV3CNUTqe9f+BXfnff37D7/+HZZi3UNKuBE42vDr3yU7t836sSnYTmQoUCEmvNNZnJaY+F5uYcJp4rvVhZklRvaFoOHcsgj1tBCRoIllOLfO+vFjsE5WAAwFiKekOBrHcIO1AMhGSkOGN5LGIyLDRmHId69I7AnjGs4tstYgAAvGMeS4ooJVNKbh3AafEbUCBZn4hqhf5K8xFoB+kNKQxQXBAOSRDL3h3MIaT8VYWCOORRMZopjKT2usxIihCQzRrL/CQzkWKoQZfUpDVI7M62phjaL8Ehii9rjFMhu+uhW7/SU2RHwvr7CwXF0pR61NZG0YsrBUXv72WSyXl6jLLrWhMMwMxWdmKD4zQ/GZGYrPzFB8ZobiMzMUn5mh+MwMxWdmKD5f3/D/rzgoXNvv624AAAAASUVORK5CYII=" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      Flipkart
+    </a>
+    <nav class="navbar navbar-light bg-warning">
+  <div class="container-fluid">
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+  </div>
+</nav>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#" >Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Shop</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Stores</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Mega menu</a>
+  </li><li class="nav-item">
+    <a class="nav-link" href="#">Pages</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Account</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Docs</a>
+</ul>
+     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.finovish.com/main/assets/images/banner-1.jpg" class="d-block w-100" alt="...">
+    </div>
+</div>
+<h1>Featured Categoories</h1>
+<div class="container">
+<div class="card" style="width: 18rem;">
+  <img src="https://www.handgadi.com/img/product/department/dairy_bread_eggs/category2/prd3/img1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Dairy,Bread & Eggs</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://images.albertsons-media.com/is/image/ABS/960199532-C1N1?$ng-ecom-pdp-desktop$&defaultImage=Not_Available" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Snack & Munchies</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://m.media-amazon.com/images/I/81EetTSBgpL._SX679_PIbundle-4,TopRight,0,0_AA679SH20_.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Bakery & Biscuits</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/CIW/2024/6/27/d6cade7d-0ab3-43a5-b907-4fd0ed125295_instantnoodlesandpasta_KH4G47GG07_MN.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Instant Food</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://www.freedomcart.com/image/cache/catalog/data/brands/tea-and-coffee-300x300.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Tea,Coffee & Drinks</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://img.thecdn.in/344986/cat/1705405028411_350633_cat.png?format=webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Atta,Rice & Dal</p>
+  </div>
+</div>
+ </div>
+
+  </body>
+</html>
